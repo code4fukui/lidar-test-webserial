@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>LiDAR test</title>
+</head><body>
+<h1>LiDAR test</h1>
+
+<button id=btnreq>requestPort</button>
+<button id=btnstart>startScan</button>
+<button id=btnstop>stopScan</button>
+<br>
+<div id=visualizer></div>
+
+<script type="module">
+import { LiDAR } from "./LiDAR.js";
+import { visualizeLiDAR } from "./visualizeLiDAR.js";
+
+const main = async (port) => {
+  const lidar = await LiDAR.init(port);
+  lidar.onupdate = visualizeLiDAR;
+  btnstop.onclick = () => {
+    lidar.stop();
+  };
+  btnstart.onclick = () => {
+    lidar.start();
+  };
+}
+btnreq.onclick = async () => {
+  const port = await navigator.serial.requestPort();
+  main(port);
+};
+
+const ports = await navigator.serial.getPorts();
+console.log("page load", ports);
+if (ports.length > 0) {
+  main(ports[0]);
+}
+
+</script>
+
+<style>
+body {
+  text-align: center;
+}
+</style>
+</body><html>
