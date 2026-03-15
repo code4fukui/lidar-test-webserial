@@ -1,5 +1,7 @@
 # lidar-test-webserial
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 Test for the [LiDAR unit GS2](https://akizukidenshi.com/catalog/g/gM-17407/) using the [Web Serial API](https://developer.mozilla.org/en-US/docs/Web/API/Serial).
 
 ## Demo
