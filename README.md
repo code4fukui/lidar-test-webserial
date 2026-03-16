@@ -18,4 +18,4 @@ https://code4fukui.github.io/lidar-test-webserial/
 4. Click the "startScan" button to start the LiDAR data visualization.
 
 ## License
-MIT
+MIT License — see [LICENSE](LICENSE).

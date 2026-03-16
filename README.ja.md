@@ -1,6 +1,6 @@
 # lidar-test-webserial
 
-LiDARユニットGS2を使用したWebシリアルAPIのテストプロジェクトです。
+LiDARユニットGS2を使用したWeb Serial APIのテストプロジェクトです。
 
 ## デモ
 https://code4fukui.github.io/lidar-test-webserial/
@@ -10,7 +10,7 @@ https://code4fukui.github.io/lidar-test-webserial/
 - 取得データの可視化
 
 ## 必要環境
-- Webブラウザ (Web Serial API対応)
+- Web Serial API対応ブラウザ
 
 ## 使い方
 1. ブラウザでプロジェクトページを開く
